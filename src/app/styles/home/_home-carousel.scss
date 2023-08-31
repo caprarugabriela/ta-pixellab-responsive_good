@@ -35,4 +35,8 @@
       }
     }
   }
+
+  @include media-breakpoint-up(lg) {
+    height: 572px;
+  }
 }
