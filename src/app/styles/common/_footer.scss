@@ -29,6 +29,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 50px;
+    text-transform: uppercase;
 
     ul {
       width: 50%;
@@ -46,16 +47,69 @@
   }
 
   &-contact {
-    grid-area: contact;
+    margin: auto;
+    h1 {
+      font-size: 16px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 20px;
+
+      a {
+        display: block;
+      }
+
+      a:nth-last-of-type(1) {
+        color: $brand-primary;
+        transition: text-decoration 0.1s ease-in-out;
+
+        &:hover {
+          text-decoration: 1px double underline;
+        }
+      }
+    }
+
+    @include media-breakpoint-up('lg') {
+      align-self: end;
+    }
   }
 
   &-connect {
+    margin: auto;
     grid-area: connect;
     justify-self: center;
+    display: inline-block;
+    width: 100%;
 
     @include media-breakpoint-up(lg) {
       justify-self: start;
       align-self: center;
+    }
+
+    ul {
+      display: flex;
+      gap: 40px;
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+
+      a {
+        display: block;
+      }
+
+      [class*='fa-'] {
+        color: $brand-primary;
+        font-size: 40px;
+        margin-right: 5px;
+      }
     }
   }
 }

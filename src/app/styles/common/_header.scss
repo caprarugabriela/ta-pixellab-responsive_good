@@ -32,6 +32,10 @@
     ul {
       display: flex;
       gap: 16px;
+      i[class*='fa-'] {
+        color: $brand-primary;
+        margin-right: 5px;
+      }
     }
   }
 
@@ -40,10 +44,31 @@
     grid-row: 1 / 2;
     justify-self: end;
     align-self: center;
+    display: inline-flex;
 
     ul {
       i[class*='fa-'] {
         font-size: 24px;
+      }
+
+      button {
+        position: relative;
+      }
+
+      span {
+        background: $brand-primary;
+        color: $white;
+        font-size: 12px;
+        font-weight: 700;
+        height: 18px;
+        padding: 0 7px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: -10px;
+        left: 16px;
+        position: absolute;
       }
     }
   }
@@ -84,6 +109,26 @@
         &:hover {
           background: $brand-primary;
           color: $white;
+        }
+      }
+    }
+    .nav-secondary {
+      ul {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+      }
+
+      a {
+        display: block;
+        padding: 8px 16px;
+        font-weight: 300;
+        line-height: 24px;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $brand-primary;
         }
       }
     }

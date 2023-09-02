@@ -2,9 +2,61 @@
   text-align: center;
 
   &-header {
+    position: relative;
+
+    .badge-primary {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
     img {
       max-width: 100%;
       width: 100%;
+    }
+
+    .product-tile-title {
+      font-size: 24px;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+
+      span:first-child {
+        color: $brand-secondary;
+        font-weight: 600;
+      }
+
+      span:last-child {
+        font-weight: 500;
+      }
+    }
+
+    .product-tile-subtitle {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  &-content {
+    .catalog-price {
+      text-decoration: line-through;
+      font-size: 18px;
+      font-weight: 300px;
+    }
+
+    .sale-price {
+      font-size: 24px;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      span {
+        font-weight: 500;
+        color: $brand-primary;
+      }
     }
   }
 }

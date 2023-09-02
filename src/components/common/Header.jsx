@@ -8,7 +8,8 @@ export default function Header() {
               <a href="tel:+1-877-666-1840" title="Call us">
                 <i className="fa-solid fa-phone"></i>
                 Toll Free 1-877-666-1840
-              </a>
+              </a>{' '}
+              |
             </li>
 
             <li>
@@ -40,6 +41,7 @@ export default function Header() {
             <li>
               <button type="button" title="Cart">
                 <i className="fa-solid fa-cart-shopping"></i>
+                <span class="qty d-none d-lg-block">3</span>
               </button>
             </li>
 
